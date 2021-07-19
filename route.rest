@@ -6,3 +6,10 @@ POST http://localhost:3000/urls
 Content-Type: application/json
 
 {"original": "https://www.google.com"}
+
+#####
+
+PATCH  http://localhost:3000/urls/60f5e2844a64d875b8e3fa55
+Content-Type: application/json
+
+{"original": "https:/www.Github.com/RKSouth"}

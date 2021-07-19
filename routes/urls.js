@@ -75,5 +75,20 @@ router.post('/', async (req, res) => {
    return array;
   }
   
+  // Updating One
+router.patch('/:id', getUrl, async (req, res) => {
+    if (req.body.original != null) {
+      res.url.original = req.body.original
+      res.url.count = res.url.count + 1
+      console.log("access count: " + res.url.count);
+      console.log(res.url.short +" updated to now link to: " + res.url.original)
+    }
+    try {
+      const updatedUrl = await res.url.save()
+      res.json(updatedUrl);
+    } catch (err) {
+      res.status(400).json({ message: err.message })
+    }
+  })
   
   module.exports = router
