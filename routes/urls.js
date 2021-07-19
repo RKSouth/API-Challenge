@@ -90,5 +90,16 @@ router.patch('/:id', getUrl, async (req, res) => {
       res.status(400).json({ message: err.message })
     }
   })
+
+//   DELETE ONE
+  router.delete('/:id', getUrl, async (req, res) => {
+    try {
+      await res.url.remove()
+      res.json({ message: 'Deleted Url' })
+    } catch (err) {
+      res.status(500).json({ message: err.message })
+    }
+  })
+  
   
   module.exports = router
