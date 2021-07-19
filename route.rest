@@ -1,2 +1,8 @@
 GET http://localhost:3000/urls
 ######
+
+
+POST http://localhost:3000/urls
+Content-Type: application/json
+
+{"original": "https://www.google.com"}
