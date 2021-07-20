@@ -1,22 +1,19 @@
-
-# this will get all the urls
 GET http://localhost:3000/urls
 ######
 
-# create a new url
 POST http://localhost:3000/urls
 Content-Type: application/json
-# input the original here
+
 {"original": "https://www.google.com"}
 
-#####
-# update url with the item id 
-PATCH  http://localhost:3000/urls/60f5e2844a64d875b8e3fa55
+####
+
+PATCH  http://localhost:3000/urls/60f61fbad0509514f09b1880
 Content-Type: application/json
 
-{"original": "https:/www.Github.com/RKSouth"}
+{"original": "https:/www.Github/.com/RKSouth"}
 
 
 ####
-# delete url using item id
+
 DELETE http://localhost:3000/urls/60f5e259a435d75ab87e2d16

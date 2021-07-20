@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const urlSchema = new mongoose.Schema({
   original: {
     type: String,
-    required: true
+    required: true,
+    uniqueItems: true
   },
   short: {
     type: String,
